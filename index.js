@@ -27,3 +27,20 @@ function reverseString(string){
 }
 
 console.log(reverseString("hello brother"));
+
+//EX:04 removeFromArray
+function removeFromArray(array,element){
+  //method 1
+  for(let i=0;i<array.length-1;i++){
+    if(array[i]===element){
+      let temp=array[i];
+      array[i]=array[i+1];
+      array[i+1]=temp;
+    }
+  }
+  array.pop();
+  return array;
+}
+
+console.log(removeFromArray([1,2,3,4],3));
+
